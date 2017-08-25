@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.strongbulb.kickdiary">
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:label="${appnamepath}"
+        android:icon="${iconpath}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".view.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activity.EditDiaryActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/diary"/>
+
+        <activity
+            android:name=".view.activity.DiaryListActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/diary_list"/>
+    </application>
+
+</manifest>

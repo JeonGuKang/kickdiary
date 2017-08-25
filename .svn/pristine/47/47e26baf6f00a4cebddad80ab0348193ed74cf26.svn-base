@@ -1,0 +1,112 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:5:5-31:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Kangjeongu/.android/build-cache/92c634f935d2bbcfefe9e77674418c3171dbcd9d/output/AndroidManifest.xml:9:5-20
+MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/Kangjeongu/.android/build-cache/17af45b777f02fa73828b1b3de7cc7c56aca1228/output/AndroidManifest.xml:11:5-20
+MERGED from [me.nlmartian.silkcal:library:0.1.1] /Users/Kangjeongu/.android/build-cache/3f918b46cd2ee54b802ffd93c3c433cc7e490fa6/output/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:recyclerview-v7:22.1.1] /Users/Kangjeongu/.android/build-cache/34bd6e1158872d45c0e6f9ed0c0b219b3f12f753/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1] /Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:gridlayout-v7:23.2.1] /Users/Kangjeongu/.android/build-cache/723864dea2d967a187f1c08c2ca0e25fb811fd3a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/Kangjeongu/.android/build-cache/1b95907918d346720d000084dd1ab9541010012b/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/Kangjeongu/.android/build-cache/d140941a0ca7fb84e696b5cffc08aa3b6222917e/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:25.0.0] /Users/Kangjeongu/.android/build-cache/253e0ac574a3653f5ec92327de6ec736bdefced4/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.0.0] /Users/Kangjeongu/.android/build-cache/a8f7406d40403b5bb59165351c11cebd31f62498/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.0.0] /Users/Kangjeongu/.android/build-cache/d30c71dbfa638ff063c78cf5048e85b39161b8c4/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.0.0] /Users/Kangjeongu/.android/build-cache/17ce78c64e5389bb925746baa4004d6379f8578a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.0.0] /Users/Kangjeongu/.android/build-cache/306c642b900994772b52529cc6d7b5e78263cbf4/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.0.0] /Users/Kangjeongu/.android/build-cache/a1b7d9ecd9f677b802a5f2595050873995f268af/output/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:9:9-41
+	android:supportsRtl
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:11:9-35
+	android:roundIcon
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:10:9-54
+	android:allowBackup
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:7:9-35
+	android:icon
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:8:9-43
+	android:theme
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:12:9-40
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:6:9-41
+activity#com.strongbulb.kickdiary.view.activity.MainActivity
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:14:9-20:20
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:14:19-61
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:18:27-74
+activity#com.strongbulb.kickdiary.view.activity.EditDiaryActivity
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:22:9-25:44
+	android:screenOrientation
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:24:13-49
+	android:label
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:25:13-42
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:23:13-60
+activity#com.strongbulb.kickdiary.view.activity.DiaryListActivity
+ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:27:9-30:49
+	android:screenOrientation
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:29:13-49
+	android:label
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:30:13-47
+	android:name
+		ADDED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml:28:13-60
+uses-sdk
+INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/Kangjeongu/.android/build-cache/92c634f935d2bbcfefe9e77674418c3171dbcd9d/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.4.0] /Users/Kangjeongu/.android/build-cache/a3f538bf157a0ebecf52488e1a237b7f4077e3f2/output/AndroidManifest.xml:5:5-43
+MERGED from [com.skyfishjy.ripplebackground:library:1.0.1] /Users/Kangjeongu/.android/build-cache/17af45b777f02fa73828b1b3de7cc7c56aca1228/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.oguzdev:CircularFloatingActionMenu:1.0.2] /Users/Kangjeongu/.android/build-cache/f5023188a51d9e9ae8f9e3d8d5ebd977ee99bae2/output/AndroidManifest.xml:7:5-9:41
+MERGED from [me.nlmartian.silkcal:library:0.1.1] /Users/Kangjeongu/.android/build-cache/3f918b46cd2ee54b802ffd93c3c433cc7e490fa6/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:22.1.1] /Users/Kangjeongu/.android/build-cache/34bd6e1158872d45c0e6f9ed0c0b219b3f12f753/output/AndroidManifest.xml:20:5-43
+MERGED from [com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1] /Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:gridlayout-v7:23.2.1] /Users/Kangjeongu/.android/build-cache/723864dea2d967a187f1c08c2ca0e25fb811fd3a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.0.0] /Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.0.0] /Users/Kangjeongu/.android/build-cache/1b95907918d346720d000084dd1ab9541010012b/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.0.0] /Users/Kangjeongu/.android/build-cache/d140941a0ca7fb84e696b5cffc08aa3b6222917e/output/AndroidManifest.xml:21:5-43
+MERGED from [com.daimajia.swipelayout:library:1.2.0] /Users/Kangjeongu/.android/build-cache/1b13019fce8f5258e3667c4287b78a213ebc8900/output/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.databinding:adapters:1.3.1] /Users/Kangjeongu/.android/build-cache/aa1ad759227863e4ddd7e88f6ff5b3dfcc48865c/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.3.1] /Users/Kangjeongu/.android/build-cache/f55d6ee0ba2a811d43daf9372ce28637cab4ca40/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:25.0.0] /Users/Kangjeongu/.android/build-cache/253e0ac574a3653f5ec92327de6ec736bdefced4/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.0.0] /Users/Kangjeongu/.android/build-cache/a8f7406d40403b5bb59165351c11cebd31f62498/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.0.0] /Users/Kangjeongu/.android/build-cache/d30c71dbfa638ff063c78cf5048e85b39161b8c4/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.0.0] /Users/Kangjeongu/.android/build-cache/17ce78c64e5389bb925746baa4004d6379f8578a/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.0.0] /Users/Kangjeongu/.android/build-cache/306c642b900994772b52529cc6d7b5e78263cbf4/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.0.0] /Users/Kangjeongu/.android/build-cache/a1b7d9ecd9f677b802a5f2595050873995f268af/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.0.0] /Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Kangjeongu/Desktop/KickDiary/app/src/main/AndroidManifest.xml
+activity#android.support.v7.widget.TestActivity
+ADDED from [com.android.support:recyclerview-v7:22.1.1] /Users/Kangjeongu/.android/build-cache/34bd6e1158872d45c0e6f9ed0c0b219b3f12f753/output/AndroidManifest.xml:23:9-25:56
+	android:label
+		ADDED from [com.android.support:recyclerview-v7:22.1.1] /Users/Kangjeongu/.android/build-cache/34bd6e1158872d45c0e6f9ed0c0b219b3f12f753/output/AndroidManifest.xml:25:13-53
+	android:name
+		ADDED from [com.android.support:recyclerview-v7:22.1.1] /Users/Kangjeongu/.android/build-cache/34bd6e1158872d45c0e6f9ed0c0b219b3f12f753/output/AndroidManifest.xml:24:13-66

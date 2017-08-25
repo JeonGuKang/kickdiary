@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h320dp-v13/values-h320dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 65,
+                    "endOffset": 116
+                },
+                "from": {
+                    "file": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/values-h320dp/values-h320dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 204,
+                        "endColumn": 65,
+                        "endOffset": 265
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 121,
+                    "endColumn": 61,
+                    "endOffset": 178
+                },
+                "from": {
+                    "file": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/values-h320dp/values-h320dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 270,
+                        "endColumn": 61,
+                        "endOffset": 327
+                    }
+                }
+            }
+        ]
+    }
+]

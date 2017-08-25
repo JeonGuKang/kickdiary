@@ -1,0 +1,81 @@
+package com.strongbulb.kickdiary.viewmodel;
+
+import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
+import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import com.strongbulb.kickdiary.eventbus.holder.OttoBusHolder;
+import com.strongbulb.kickdiary.util.KLog;
+import com.strongbulb.kickdiary.view.activity.MainActivity;
+import com.strongbulb.kickdiary.view.adapter.DBAdapter;
+import com.strongbulb.kickdiary.viewmodel.base.BaseViewModel;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * Created by JeonGuKang on 2017-03-29.
+ */
+
+public class MainViewModel extends BaseViewModel{
+
+    private Context mContext;
+    private MainActivity mainActivity;
+    private Timer mCurrentTimer;
+
+    public MainViewModel(Context context) {
+        super(context);
+    }
+
+    @Override
+    public void oncreate() {
+        super.oncreate();
+        mainActivity =  (MainActivity) mBaseContext;
+    }
+
+    public void startSetCurrentTime() {
+        mCurrentTimer = new Timer();
+        CurrentimerTask timerTask = new CurrentimerTask();
+        mCurrentTimer.schedule(timerTask, 500, 1000);
+    }
+
+    private Handler mHandler = new Handler();
+
+    private Runnable mCurrentUpdateTimeTask = new Runnable() {
+        public void run() {
+            Date rightNow = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat(
+                    "hh : mm : ss");
+            String dateString = formatter.format(rightNow);
+            mainActivity.getBinding().tvCurrentTime.setText(dateString);
+			        }
+    };
+
+    private class CurrentimerTask extends TimerTask {
+        public void run() {
+            mHandler.post(mCurrentUpdateTimeTask);
+        }
+    }
+
+
+    @Override
+    public void destroy() {
+        super.destroy();
+    }
+}
+

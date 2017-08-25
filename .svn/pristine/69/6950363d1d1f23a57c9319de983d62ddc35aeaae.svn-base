@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/layout-v21/notification_action.xml"
+    }
+]

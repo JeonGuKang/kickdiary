@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                                     
+                                                                           
+           
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/activity_edit_diary_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <EditText
+                android:id="@+id/et_edit_diary_title"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/single_text_height"
+                android:layout_alignParentTop="true"
+                android:hint="@string/title"/>
+
+            <EditText
+                android:id="@+id/et_edit_diary_content"
+                style="@style/Style_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_edit_diary_title"
+                android:gravity="top|left"
+                android:hint="@string/content" />
+
+    </RelativeLayout>
+         

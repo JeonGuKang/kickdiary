@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-land/date_picker_header.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/layout-land/date_picker_header.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-land/time_picker_layout.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/layout-land/time_picker_layout.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-land/sublime_picker_view_layout.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/layout-land/sublime_picker_view_layout.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/layout-land/date_picker_layout.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/layout-land/date_picker_layout.xml"
+    }
+]

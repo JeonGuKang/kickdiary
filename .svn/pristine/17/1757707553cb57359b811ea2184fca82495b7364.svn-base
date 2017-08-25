@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/sp_date_picker_fade_out.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/anim/sp_date_picker_fade_out.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/sp_date_picker_fade_in.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/anim/sp_date_picker_fade_in.xml"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/Kangjeongu/.android/build-cache/bad82665b99832560adb1558c57fe4937d433e0a/output/res/anim/abc_slide_out_bottom.xml"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/drawable-mdpi/reset_ff.png",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/drawable-mdpi/reset_ff.png"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/drawable-mdpi/cancel_medium_ff.png",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/drawable-mdpi/cancel_medium_ff.png"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/drawable-mdpi/sp_chevron_start.png",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/drawable-mdpi/sp_chevron_start.png"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/drawable-mdpi/checkmark_medium_ff.png",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/drawable-mdpi/checkmark_medium_ff.png"
+    },
+    {
+        "merged": "/Users/Kangjeongu/Desktop/KickDiary/app/build/intermediates/res/merged/debug/drawable-mdpi/sp_chevron_end.png",
+        "source": "/Users/Kangjeongu/.android/build-cache/0cdf6a20518d09453d794bd4d0ad049e405a30f8/output/res/drawable-mdpi/sp_chevron_end.png"
+    }
+]
