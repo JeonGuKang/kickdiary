@@ -1,37 +1,18 @@
 package com.strongbulb.kickdiary.view.activity;
 
-import android.app.ActionBar;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.graphics.PixelFormat;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.NavUtils;
-import android.util.Pair;
-import android.view.DragEvent;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
-import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
-import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 import com.strongbulb.kickdiary.Constants;
 import com.strongbulb.kickdiary.R;
 import com.strongbulb.kickdiary.databinding.ActivityEditDiaryBinding;
 import com.strongbulb.kickdiary.model.DiaryData;
 import com.strongbulb.kickdiary.preference.SharedPreferenceManager;
-import com.strongbulb.kickdiary.util.KLog;
-import com.strongbulb.kickdiary.util.Utils;
 import com.strongbulb.kickdiary.view.base.BaseActivity;
-import com.strongbulb.kickdiary.view.fragment.SublimePickerFragment;
 import com.strongbulb.kickdiary.viewmodel.EditDiaryViewModel;
 
 
@@ -47,6 +28,7 @@ public class EditDiaryActivity extends BaseActivity {
     private DiaryData                   mDiaryData;
     private boolean                     mIsModify               = false;
     private boolean                     mIsSaveClicked          = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
