@@ -1,19 +1,20 @@
 package com.strongbulb.kickdiary.view.activity;
 
+import com.strongbulb.kickdiary.Constants;
+import com.strongbulb.kickdiary.R;
+import com.strongbulb.kickdiary.databinding.ActivityEditDiaryBinding;
+import com.strongbulb.kickdiary.model.DiaryData;
+import com.strongbulb.kickdiary.preference.SharedPreferenceManager;
+import com.strongbulb.kickdiary.util.RealmUtil;
+import com.strongbulb.kickdiary.view.base.BaseActivity;
+import com.strongbulb.kickdiary.viewmodel.EditDiaryViewModel;
+
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.strongbulb.kickdiary.Constants;
-import com.strongbulb.kickdiary.R;
-import com.strongbulb.kickdiary.databinding.ActivityEditDiaryBinding;
-import com.strongbulb.kickdiary.model.DiaryData;
-import com.strongbulb.kickdiary.preference.SharedPreferenceManager;
-import com.strongbulb.kickdiary.view.base.BaseActivity;
-import com.strongbulb.kickdiary.viewmodel.EditDiaryViewModel;
 
 
 /**
@@ -26,7 +27,7 @@ public class EditDiaryActivity extends BaseActivity {
     private ActivityEditDiaryBinding    editDiaryBinding;
     private Context                     mContext;
     private DiaryData                   mDiaryData;
-    private boolean                     mIsModify               = false;
+    private boolean             mIsModify               = false;
     private boolean                     mIsSaveClicked          = false;
 
 
@@ -47,7 +48,8 @@ public class EditDiaryActivity extends BaseActivity {
         if(getIntent() != null) {
             if(getIntent().getExtras() != null) {
                 mIsModify = true;
-                mDiaryData = (DiaryData)getIntent().getExtras().getSerializable(Constants.Extras.DIARYDATA);
+                int no = getIntent().getExtras().getInt(Constants.Extras.NO);
+                mDiaryData = RealmUtil.getDiaryDataItem(no);
                 initView(mDiaryData);
             } else {
                 initView();
@@ -57,7 +59,8 @@ public class EditDiaryActivity extends BaseActivity {
     }
 
     public void initView (DiaryData diaryData) {
-        setTitleUseUiThread(diaryData.getDate());
+        editDiaryViewModel.setAllTime(diaryData.getDate());
+        setTitleUseUiThread(diaryData.getDate().substring(0,10));
         editDiaryBinding.etEditDiaryTitle.setText(diaryData.getTitle());
         editDiaryBinding.etEditDiaryContent.setText(diaryData.getContent());
     }
@@ -85,13 +88,11 @@ public class EditDiaryActivity extends BaseActivity {
                     setTitleRightButton(R.mipmap.ic_save, null);
                     if(mIsModify) {
                         editDiaryViewModel.updateDiary(mDiaryData.getNo(),editDiaryBinding.etEditDiaryTitle.getText().toString(),
-                                editDiaryBinding.etEditDiaryContent.getText().toString(),
-                                getStrTitle());
+                                editDiaryBinding.etEditDiaryContent.getText().toString());
                         setResult(RESULT_OK, new Intent().putExtra(Constants.Extras.NO, mDiaryData.getNo()));
                     } else {
                         editDiaryViewModel.saveDiary(editDiaryBinding.etEditDiaryTitle.getText().toString(),
-                                editDiaryBinding.etEditDiaryContent.getText().toString(),
-                                getStrTitle());
+                                editDiaryBinding.etEditDiaryContent.getText().toString());
                         SharedPreferenceManager.getInstance().tempDeleteDiary();
 
                     }
@@ -149,4 +150,11 @@ public class EditDiaryActivity extends BaseActivity {
         }
     }
 
+    public boolean isModify() {
+        return mIsModify;
+    }
+
+    public void setModify(boolean modify) {
+        mIsModify = modify;
+    }
 }

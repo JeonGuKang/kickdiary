@@ -1,27 +1,24 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
 
 def defaultApplicationId = "com.strongbulb.kickdiary"
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    flavorDimensions "SERVER"
+    compileSdkVersion 27
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.strongbulb.kickdiary"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 2
         versionName "0.0.2"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    sourceSets {
-        packagingOptions {
-            //...
-            exclude 'META-INF/LICENSE.txt'
-            exclude 'LICENSE.txt' // 이걸 꼭 추가!
-        }
-    }
+
 
     dataBinding {
         enabled = true
@@ -33,7 +30,8 @@ android {
             minifyEnabled false
             manifestPlaceholders = [
                     iconpath:"@mipmap/ic_nav_back",
-                    appnamepath:"@string/app_name_beta"
+                    appnamepath:"@string/app_name_beta",
+                    dir: "src/debug/google-service.json"
             ]
 
         }
@@ -51,10 +49,12 @@ android {
 
     productFlavors {
         beta {
+            dimension "SERVER"
             applicationId defaultApplicationId + ".beta"
         }
 
         product {
+            dimension "SERVER"
             applicationId defaultApplicationId
         }
     }
@@ -62,23 +62,29 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.skyfishjy.ripplebackground:library:1.0.1'
-    compile 'com.squareup:otto:1.3.8'
-    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
-    compile 'me.nlmartian.silkcal:library:0.1.1'
-    compile 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1'
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation "com.android.support:cardview-v7:27.1.1"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'me.nlmartian.silkcal:library:0.1.1'
+    implementation 'com.appeaser.sublimepickerlibrary:sublimepickerlibrary:2.1.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
 
+
+    implementation 'com.google.android.gms:play-services-drive:16.0.0'
+    implementation 'com.github.paolorotolo:expandableheightlistview:1.0.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
 }

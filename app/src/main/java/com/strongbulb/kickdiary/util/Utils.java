@@ -1,15 +1,13 @@
 package com.strongbulb.kickdiary.util;
 
+import com.google.gson.Gson;
+
 import android.app.Activity;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.google.gson.Gson;
-
-import java.io.Serializable;
-import java.text.ParseException;
 import java.util.Date;
 
 /**
@@ -31,6 +29,11 @@ public class Utils {
     }
 
     public static String getDate(Date inputdate) {
+        java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd-HH-mm");
+        return format.format(inputdate);
+    }
+
+    public static String getYearAndMonthAndDayOfDate(Date inputdate) {
         java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
         return format.format(inputdate);
     }
@@ -42,12 +45,12 @@ public class Utils {
     }
 
     public static String monthOfDate(String textDate) {
-        if(textDate.length() < 1) return "";
+        if(textDate == null || textDate.length() < 1) return "";
         return textDate.substring(5,7);
     }
 
     public static String dayOfDate(String textDate) {
-        if(textDate.length() < 1) return "";
+        if(textDate == null || textDate.length() < 1) return "";
         return textDate.substring(8,10);
     }
 

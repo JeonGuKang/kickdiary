@@ -46,13 +46,17 @@ public class MainActivity extends BaseActivity {
 
         ImageView iv_edit = new ImageView(mContext); iv_edit.setBackgroundResource(R.mipmap.ic_edit);
         ImageView iv_list = new ImageView(mContext); iv_list.setBackgroundResource(R.mipmap.ic_list);
+        ImageView iv_setting = new ImageView(mContext); iv_setting.setBackgroundResource(R.mipmap.ic_setting);
         iv_edit.setId(R.id.iv_edit);
         iv_list.setId(R.id.iv_list);
+        iv_setting.setId(R.id.iv_setting);
         iv_edit.setOnClickListener(mOnClickListener);
         iv_list.setOnClickListener(mOnClickListener);
+        iv_setting.setOnClickListener(mOnClickListener);
         FrameLayout.LayoutParams tvParams = new FrameLayout.LayoutParams(getResources().getDimensionPixelSize(R.dimen.dimen_icon_size), getResources().getDimensionPixelSize(R.dimen.dimen_icon_size));
         iv_edit.setLayoutParams(tvParams);
         iv_list.setLayoutParams(tvParams);
+        iv_setting.setLayoutParams(tvParams);
         SubActionButton.Builder subBuilder = new SubActionButton.Builder(MainActivity.this);
         FloatingActionMenu circleMenu = new FloatingActionMenu.Builder(MainActivity.this)
             .setStartAngle(270) // A whole circle!
@@ -60,6 +64,7 @@ public class MainActivity extends BaseActivity {
             .setRadius(getResources().getDimensionPixelSize(R.dimen.radius_large))
             .addSubActionView(iv_edit)
             .addSubActionView(iv_list)
+            .addSubActionView(iv_setting)
             .attachTo(getBinding().ivBottomButton)
             .build();
     }
@@ -77,6 +82,10 @@ public class MainActivity extends BaseActivity {
                 case R.id.llo_alram_time:
                     mainViewModel.startAlarmTime();
                     break;
+                case R.id.iv_setting:
+                    startActivity(new Intent(mContext, BackupActivity.class));
+                    break;
+
             }
         }
     };

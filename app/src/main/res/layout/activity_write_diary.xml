@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:id="@+id/root"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+  </android.support.design.widget.AppBarLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:hint="@string/title"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:lines="1"
+        android:textColorHint="@color/color_c1c1c1"
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/et_title"
+        android:background="@color/color_e0e0e0" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_write"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llo_bottom_bar"
+        android:layout_below="@+id/view_line" />
+
+
+    <LinearLayout
+        android:id="@+id/llo_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_f5f5f5"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+      <ImageButton
+          android:id="@+id/img_gallery"
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:background="@null"
+          android:src="@mipmap/ic_photo_album_black_24dp" />
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</LinearLayout>

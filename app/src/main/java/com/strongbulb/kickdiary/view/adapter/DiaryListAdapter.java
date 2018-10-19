@@ -1,24 +1,17 @@
 package com.strongbulb.kickdiary.view.adapter;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.android.databinding.library.baseAdapters.BR;
 import com.strongbulb.kickdiary.R;
 import com.strongbulb.kickdiary.model.DiaryData;
 import com.strongbulb.kickdiary.util.Utils;
 import com.strongbulb.kickdiary.view.viewholder.DiaryListViewHolder;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by JeonGuKang on 2017-04-11.
@@ -61,6 +54,10 @@ public class DiaryListAdapter extends RecyclerView.Adapter<DiaryListViewHolder> 
 
     public DiaryData getItem(int position) {
         return mDiaryDataList.get(position);
+    }
+
+    public ArrayList<DiaryData> getDiaryDataList() {
+        return mDiaryDataList;
     }
 
     public void add(DiaryData data) {

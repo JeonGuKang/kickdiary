@@ -1,26 +1,24 @@
 package com.strongbulb.kickdiary.viewmodel;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-
 import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 import com.strongbulb.kickdiary.Constants;
-import com.strongbulb.kickdiary.eventbus.holder.OttoBusHolder;
 import com.strongbulb.kickdiary.model.DiaryData;
 import com.strongbulb.kickdiary.preference.SharedPreferenceManager;
-import com.strongbulb.kickdiary.util.KLog;
+import com.strongbulb.kickdiary.util.RealmUtil;
 import com.strongbulb.kickdiary.util.Utils;
 import com.strongbulb.kickdiary.view.activity.EditDiaryActivity;
-import com.strongbulb.kickdiary.view.activity.MainActivity;
-import com.strongbulb.kickdiary.view.adapter.DBAdapter;
 import com.strongbulb.kickdiary.view.fragment.SublimePickerFragment;
 import com.strongbulb.kickdiary.viewmodel.base.BaseViewModel;
 
-import java.util.Date;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+
+import io.realm.Realm;
+
+import static io.realm.Realm.getDefaultInstance;
 
 /**
  * Created by JeonGuKang on 2017-03-29.
@@ -28,9 +26,9 @@ import java.util.Date;
 
 public class EditDiaryViewModel extends BaseViewModel {
 
-    private Context mContext;
     private EditDiaryActivity mEditDiaryActivity;
-    private SelectedDate mSelectedDate;
+
+    private String allTime;
 
     public EditDiaryViewModel(Context context) {
         super(context);
@@ -49,8 +47,9 @@ public class EditDiaryViewModel extends BaseViewModel {
 
     public String getCurrentDate() {
         java.util.Date currentDate = new java.util.Date();
-        java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
-        return format.format(currentDate);
+        java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd-HH-mm");
+        allTime = format.format(currentDate);
+        return Utils.getYearAndMonthAndDayOfDate(currentDate);
     }
 
 //    public String getDate(Date inputdate) {
@@ -99,27 +98,58 @@ public class EditDiaryViewModel extends BaseViewModel {
                                             int hourOfDay, int minute,
                                             SublimeRecurrencePicker.RecurrenceOption recurrenceOption,
                                             String recurrenceRule) {
-            mSelectedDate = selectedDate;
-            mEditDiaryActivity.setTitleUseUiThread( Utils.getDate(selectedDate.getFirstDate().getTime()));
+            if(mEditDiaryActivity.isModify()) {
+                allTime = Utils.getDate(selectedDate.getFirstDate().getTime()).substring(0,10)+allTime.substring(10, allTime.length());
+            } else {
+                allTime = Utils.getDate(selectedDate.getFirstDate().getTime());
+            }
+
+            mEditDiaryActivity.setTitleUseUiThread( Utils.getYearAndMonthAndDayOfDate(selectedDate.getFirstDate().getTime()));
         }
     };
 
-    public void updateDiary(int no, String title, String content, String date) {
-        mEditDiaryActivity.getmDB().getInstance().updateDiary(new DiaryData(no, title, content, date, 1));
-        for(int i = 0; i < mEditDiaryActivity.getmDB().getInstance().getDiaryList().size(); i++) {
-            Utils.testClassToString(mEditDiaryActivity.getmDB().getInstance().getDiaryList().get(i));
-        }
+    public void updateDiary(final int no,final String title,final String content) {
+
+        getDefaultInstance().executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                DiaryData diaryData = null;
+                diaryData = realm.where(DiaryData.class).equalTo("no", no).findFirst();
+                diaryData.setTitle(title);
+                diaryData.setContent(content);
+                diaryData.setDate(allTime);
+
+            }
+        });
     }
 
-    public void saveDiary(String title, String content, String date) {
-        mEditDiaryActivity.getmDB().getInstance().saveDiary(new DiaryData(title, content, date, 1));
-        for(int i = 0; i < mEditDiaryActivity.getmDB().getInstance().getDiaryList().size(); i++) {
-            Utils.testClassToString(mEditDiaryActivity.getmDB().getInstance().getDiaryList().get(i));
-        }
+    public void saveDiary(final String title,final String content) {
+
+        getDefaultInstance().executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                DiaryData diaryData = null;
+                if(realm.where(DiaryData.class).findFirst() != null) {
+                    diaryData = realm.createObject(DiaryData.class, RealmUtil.getNextKey(realm));
+                } else {
+                    diaryData = realm.createObject(DiaryData.class, 0);
+                }
+
+                diaryData.setTitle(title);
+                diaryData.setContent(content);
+                diaryData.setDate(allTime);
+                diaryData.setType(Constants.DiaryType.DEFULT);
+            }
+        });
+
     }
 
     public void tempSaveDiary(String title, String content, String date) {
         SharedPreferenceManager.getInstance().tempSaveDiary(title, content, date);
+    }
+
+    public void setAllTime(String allTime) {
+        this.allTime = allTime;
     }
 
 }

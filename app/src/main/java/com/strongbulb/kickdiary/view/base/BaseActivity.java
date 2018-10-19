@@ -1,30 +1,20 @@
 package com.strongbulb.kickdiary.view.base;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.strongbulb.kickdiary.Constants;
 import com.strongbulb.kickdiary.R;
 import com.strongbulb.kickdiary.util.Utils;
-import com.strongbulb.kickdiary.view.adapter.DBAdapter;
 
 /**
  * Created by JeonGuKang on 2017-01-02.
@@ -40,33 +30,33 @@ public class BaseActivity extends AppCompatActivity {
     private RelativeLayout  mRloTitle;
     private TextView        mTitle;
     private ImageView       mBtnTitleRight;
-    private DBAdapter       mDB;
+    //private DBAdapter       mDB;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBaseContext = this;
         mCustomBar = LayoutInflater.from(mBaseContext).inflate(R.layout.layout_editdiary_header, null);
-        connectDataBase();
+        //connectDataBase();
     }
 
     @Override
     protected void onDestroy() {
-        closeDB();
+        //closeDB();
         super.onDestroy();
     }
 
-    public void connectDataBase() {
-        mDB.getInstance().connect(mBaseContext);
-    }
-
-    public void closeDB() {
-        mDB.getInstance().close();
-    }
-
-    public DBAdapter getmDB() {
-        return mDB;
-    }
+//    public void connectDataBase() {
+//        mDB.getInstance().connect(mBaseContext);
+//    }
+//
+//    public void closeDB() {
+//        mDB.getInstance().close();
+//    }
+//
+//    public DBAdapter getmDB() {
+//        return mDB;
+//    }
 
     public void setCustomParentToolbar(final int BackGroundColor,final View.OnClickListener listener) {
 

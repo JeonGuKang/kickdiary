@@ -10,6 +10,7 @@ public class Constants {
 
     /////Request Activity
     public final static String PREF_FILE_NAME                       = "KICKDIARY";
+    static final int REALM_VERSION = 1;
 
     public static final class DB_Column{
         public static final String NO           = "no";
@@ -60,6 +61,14 @@ public class Constants {
         public final static String CONTENT                      = "CONTENT";
         public final static String DATE                         = "DATE";
         public final static String GETOFFWORKTIME               = "GETOFFWORKTIME";
+    }
+
+    public static final class DiaryType {
+        public final static int DEFULT = 1;
+    }
+
+    public static final class GOOGLE_DRIVE {
+        public final static String FOLDER_NAME = "KickDiary";
     }
 
 }

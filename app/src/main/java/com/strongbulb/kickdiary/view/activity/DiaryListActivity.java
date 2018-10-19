@@ -11,14 +11,14 @@ import android.view.View;
 import com.strongbulb.kickdiary.Constants;
 import com.strongbulb.kickdiary.R;
 import com.strongbulb.kickdiary.databinding.ActivityDiarylistBinding;
-import com.strongbulb.kickdiary.databinding.ActivityEditDiaryBinding;
 import com.strongbulb.kickdiary.model.DiaryData;
 import com.strongbulb.kickdiary.util.KLog;
-import com.strongbulb.kickdiary.util.Utils;
+import com.strongbulb.kickdiary.util.RealmUtil;
 import com.strongbulb.kickdiary.view.adapter.DiaryListAdapter;
 import com.strongbulb.kickdiary.view.base.BaseActivity;
 import com.strongbulb.kickdiary.viewmodel.DiaryListViewModel;
-import com.strongbulb.kickdiary.viewmodel.EditDiaryViewModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by JeonGuKang on 2017-04-11.
@@ -50,11 +50,10 @@ public class DiaryListActivity extends BaseActivity {
         diarylistBinding.rvList.setHasFixedSize(true);
         diarylistBinding.rvList.setLayoutManager(linearLayoutManager);
 
-        for(int i = 0; i < getmDB().getInstance().getDiaryList().size(); i++) {
-            mDiaryListAdapter.add(getmDB().getInstance().getDiaryList().get(i));
-        }
+        ArrayList<DiaryData> diaryDataList = new ArrayList(RealmUtil.getDiaryDataListSortDate());
+        mDiaryListAdapter.add(diaryDataList);
         mDiaryListAdapter.notifyDataSetChanged();
-        KLog.i("mDiaryListAdapter.getItemCount() = " + mDiaryListAdapter.getItemCount());
+
     }
 
     private DiaryListAdapter.OnItemClickListener onItemClickListener = new DiaryListAdapter.OnItemClickListener() {
@@ -131,8 +130,6 @@ public class DiaryListActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == Constants.ResultActivityCode.EDITDIARYACTIVITY) {
             if(resultCode == RESULT_OK) {
-                KLog.i("RESULT_OK");
-                KLog.i("data.getIntExtra(Constants.Extras.NO, 0) = " + data.getIntExtra(Constants.Extras.NO, 0));
                 diaryListViewModel.listItemUpdate(data.getIntExtra(Constants.Extras.NO, 0));
             }
         }

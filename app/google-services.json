@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "757154681891",
+    "firebase_url": "https://kickdiary.firebaseio.com",
+    "project_id": "kickdiary",
+    "storage_bucket": "kickdiary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757154681891:android:10349938f791864e",
+        "android_client_info": {
+          "package_name": "com.strongbulb.kickdiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757154681891-2olpq5rskee0dq9qlhcrij3om66vm653.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.strongbulb.kickdiary",
+            "certificate_hash": "b5d83c1a05e15c96781753eacf25d2143f8f31d8"
+          }
+        },
+        {
+          "client_id": "757154681891-pgp4r1c135rblupidd291gduh9519l5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZjzpRxf1Z854rgblv1Y9LzlPMlxROslw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757154681891-pgp4r1c135rblupidd291gduh9519l5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757154681891:android:058175e9a9521189",
+        "android_client_info": {
+          "package_name": "com.strongbulb.kickdiary.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757154681891-nbcfdfncul2jqtduk75fq8lmjioefov3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.strongbulb.kickdiary.beta",
+            "certificate_hash": "b5d83c1a05e15c96781753eacf25d2143f8f31d8"
+          }
+        },
+        {
+          "client_id": "757154681891-pgp4r1c135rblupidd291gduh9519l5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZjzpRxf1Z854rgblv1Y9LzlPMlxROslw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757154681891-pgp4r1c135rblupidd291gduh9519l5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -9,6 +9,7 @@ import com.appeaser.sublimepickerlibrary.datepicker.SelectedDate;
 import com.appeaser.sublimepickerlibrary.helpers.SublimeOptions;
 import com.appeaser.sublimepickerlibrary.recurrencepicker.SublimeRecurrencePicker;
 import com.strongbulb.kickdiary.preference.SharedPreferenceManager;
+import com.strongbulb.kickdiary.util.RealmUtil;
 import com.strongbulb.kickdiary.view.activity.MainActivity;
 import com.strongbulb.kickdiary.view.fragment.SublimePickerFragment;
 import com.strongbulb.kickdiary.viewmodel.base.BaseViewModel;
@@ -41,6 +42,9 @@ public class MainViewModel extends BaseViewModel{
     public void oncreate() {
         super.oncreate();
         mainActivity =  (MainActivity) mBaseContext;
+        //Log.i("mylog", ">>>>>   ApplicationClass.getDiaryDataList().size() :  " + RealmUtil.getDiaryDataList().size());
+        RealmUtil.prinAllRealmData();
+        //mainActivity.startActivity(new Intent(mainActivity, BackupActivity.class));
     }
 
     public void startCurrentTime() {

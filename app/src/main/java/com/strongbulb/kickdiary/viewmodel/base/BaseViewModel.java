@@ -3,7 +3,6 @@ package com.strongbulb.kickdiary.viewmodel.base;
 import android.content.Context;
 
 import com.strongbulb.kickdiary.eventbus.holder.OttoBusHolder;
-import com.strongbulb.kickdiary.view.adapter.DBAdapter;
 import com.strongbulb.kickdiary.viewmodel.ViewModel;
 
 /**
